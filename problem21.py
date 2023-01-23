@@ -1,3 +1,5 @@
+import time
+start = time.time()
 sum_of_amicables = 0
 
 for i in range(5, 10001):
@@ -16,3 +18,4 @@ for i in range(5, 10001):
           sum_of_amicables += i
 
 print(f'result: {sum_of_amicables}')
+print(time.time() - start)
