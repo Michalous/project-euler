@@ -6,6 +6,8 @@ def primeFactors(n):
         while n % i == 0:
             n /= i
             array.append(i)
+    if n != 1:
+        array.append(int(n))
     return array
 
 

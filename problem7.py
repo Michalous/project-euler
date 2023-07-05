@@ -1,7 +1,7 @@
 def sieveOfEratosthenes(n):
     # Takes N and returns a list of primes less than N (starting with 2 at index 0).
     from math import sqrt
-    array = list(range(n))
+    array = list(range(n+1))
     
     for i in range(2, int(sqrt(n) + 1)):
         if array[i] !=0:
@@ -20,4 +20,5 @@ def sieveOfEratosthenes(n):
 
 if __name__ == "__main__":
     question = 10001
+    print(sieveOfEratosthenes(9))
     print(sieveOfEratosthenes(150000)[question - 1])
