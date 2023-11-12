@@ -2,8 +2,9 @@ permissible_chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567
 
 def main():
     with open("0059_cipher.txt", "r") as handle:
-        data = handle.read()
+        data = handle.read()    
     cipher_array = data.split(',')
+    
     for a in permissible_chars[0:26]:
         for b in permissible_chars[0:26]:
             for c in permissible_chars[0:26]:
@@ -17,9 +18,10 @@ def main():
                     test_string += (d + e + f)
                 if test_string.count('the') > 5:
                     print(test_string)
-                    print('=====')
+                    print('======')
                     print(a,b,c)
-                    print('=====')
+                    print(sum([ord(x) for x in test_string]))
+                    print('======')
 
 
 def xor_cipher(num, key):
