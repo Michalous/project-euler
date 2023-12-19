@@ -29,5 +29,5 @@ for permutation in itertools.permutations(['1', '2', '3', '4', '5', '6', '7', '8
         else:
             if e+a+b+c+d not in result:
                 result.append(e+a+b+c+d)
-print(max(result))
-print(time.time() - start)
+print(''.join(str(x) for x in max(result)))
+print('time: ' + str(time.time() - start) + 's')
